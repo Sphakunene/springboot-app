@@ -2,6 +2,7 @@ package com.springapp.springbootapp.service.imp;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springapp.springbootapp.model.Employee;
@@ -11,6 +12,7 @@ import com.springapp.springbootapp.service.EmployeeService;
 @Service
 public class EmployeeServiceImp implements EmployeeService{
 	
+	@Autowired
 	private EmployeeRepository employeeRepository;
 	
 	
@@ -24,7 +26,10 @@ public class EmployeeServiceImp implements EmployeeService{
 
 	@Override
 	public Employee saveEmployee(Employee employee) {
+
 		return employeeRepository.save(employee);
+		
+		
 	}
 
 

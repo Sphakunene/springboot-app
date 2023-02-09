@@ -3,9 +3,9 @@ package com.springapp.springbootapp.model;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 
-@Data
+
+
 @Entity
 @Table(name = "employees")
 public class Employee {
@@ -21,4 +21,29 @@ public class Employee {
     
     @Column(name="email")
 	private String email;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+    
 }
